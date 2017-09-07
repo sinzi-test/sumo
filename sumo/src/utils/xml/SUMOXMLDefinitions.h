@@ -249,6 +249,7 @@ enum SumoXMLTag {
     /// @name Car-Following models
     /// @{
     SUMO_TAG_CF_KRAUSS,
+    SUMO_TAG_CF_SINZI,
     SUMO_TAG_CF_KRAUSS_PLUS_SLOPE,
     SUMO_TAG_CF_KRAUSS_ORIG1,
     SUMO_TAG_CF_KRAUSSX,

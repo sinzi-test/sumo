@@ -163,6 +163,7 @@ StringBijection<int>::Entry SUMOXMLDefinitions::tags[] = {
     { "carFollowing-IDM",           SUMO_TAG_CF_IDM },
     { "carFollowing-IDMM",          SUMO_TAG_CF_IDMM },
     { "carFollowing-Krauss",        SUMO_TAG_CF_KRAUSS },
+    { "carFollowing-sinzi",         SUMO_TAG_CF_SINZI },
     { "carFollowing-KraussPS",      SUMO_TAG_CF_KRAUSS_PLUS_SLOPE },
     { "carFollowing-KraussOrig1",   SUMO_TAG_CF_KRAUSS_ORIG1 },
     { "carFollowing-KraussX",       SUMO_TAG_CF_KRAUSSX },
@@ -667,6 +668,7 @@ StringBijection<SumoXMLTag>::Entry SUMOXMLDefinitions::carFollowModelValues[] = 
     { "IDM",         SUMO_TAG_CF_IDM },
     { "IDMM",        SUMO_TAG_CF_IDMM },
     { "Krauss",      SUMO_TAG_CF_KRAUSS },
+    { "sinzi",       SUMO_TAG_CF_SINZI },
     { "KraussPS",    SUMO_TAG_CF_KRAUSS_PLUS_SLOPE },
     { "KraussOrig1", SUMO_TAG_CF_KRAUSS_ORIG1 },
     { "KraussX",     SUMO_TAG_CF_KRAUSSX }, // experimental extensions to the Krauss model
