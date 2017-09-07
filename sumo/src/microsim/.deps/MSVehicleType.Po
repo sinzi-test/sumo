@@ -361,11 +361,11 @@ MSVehicleType.o: MSVehicleType.cpp /usr/include/stdc-predef.h \
  ../../src/microsim/MSLane.h ../../src/microsim/MSVehicleType.h \
  cfmodels/MSCFModel_Kerner.h cfmodels/MSCFModel_Krauss.h \
  cfmodels/MSCFModel_KraussOrig1.h cfmodels/MSCFModel_sinzi.h \
- cfmodels/MSCFModel_KraussOrig1.h cfmodels/MSCFModel_KraussPS.h \
- cfmodels/MSCFModel_Krauss.h cfmodels/MSCFModel_KraussX.h \
- cfmodels/MSCFModel_SmartSK.h cfmodels/MSCFModel_Daniel1.h \
- cfmodels/MSCFModel_PWag2009.h cfmodels/MSCFModel_Wiedemann.h \
- MSVehicleControl.h MSVehicleType.h
+ cfmodels/MSCFModel_Simple.h cfmodels/MSCFModel_KraussOrig1.h \
+ cfmodels/MSCFModel_KraussPS.h cfmodels/MSCFModel_Krauss.h \
+ cfmodels/MSCFModel_KraussX.h cfmodels/MSCFModel_SmartSK.h \
+ cfmodels/MSCFModel_Daniel1.h cfmodels/MSCFModel_PWag2009.h \
+ cfmodels/MSCFModel_Wiedemann.h MSVehicleControl.h MSVehicleType.h
 
 /usr/include/stdc-predef.h:
 
@@ -1430,6 +1430,8 @@ cfmodels/MSCFModel_Krauss.h:
 cfmodels/MSCFModel_KraussOrig1.h:
 
 cfmodels/MSCFModel_sinzi.h:
+
+cfmodels/MSCFModel_Simple.h:
 
 cfmodels/MSCFModel_KraussOrig1.h:
 

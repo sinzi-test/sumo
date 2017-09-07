@@ -7,6 +7,7 @@ MSCFModel_IDM.cpp MSCFModel_IDM.h \
 MSCFModel_Kerner.cpp MSCFModel_Kerner.h \
 MSCFModel_Krauss.cpp MSCFModel_Krauss.h \
 MSCFModel_sinzi.cpp MSCFModel_sinzi.h \
+MSCFModel_Simple.cpp MSCFModel_Simple.h \
 MSCFModel_KraussOrig1.cpp MSCFModel_KraussOrig1.h \
 MSCFModel_KraussPS.cpp MSCFModel_KraussPS.h \
 MSCFModel_KraussX.cpp MSCFModel_KraussX.h \

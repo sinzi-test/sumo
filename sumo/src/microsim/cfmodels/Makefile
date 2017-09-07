@@ -110,10 +110,11 @@ libmicrosimcfmodels_a_LIBADD =
 am_libmicrosimcfmodels_a_OBJECTS = MSCFModel.$(OBJEXT) \
 	MSCFModel_Daniel1.$(OBJEXT) MSCFModel_IDM.$(OBJEXT) \
 	MSCFModel_Kerner.$(OBJEXT) MSCFModel_Krauss.$(OBJEXT) \
-	MSCFModel_sinzi.$(OBJEXT) MSCFModel_KraussOrig1.$(OBJEXT) \
-	MSCFModel_KraussPS.$(OBJEXT) MSCFModel_KraussX.$(OBJEXT) \
-	MSCFModel_PWag2009.$(OBJEXT) MSCFModel_SmartSK.$(OBJEXT) \
-	MSCFModel_Wiedemann.$(OBJEXT) MSCFModel_Rail.$(OBJEXT)
+	MSCFModel_sinzi.$(OBJEXT) MSCFModel_Simple.$(OBJEXT) \
+	MSCFModel_KraussOrig1.$(OBJEXT) MSCFModel_KraussPS.$(OBJEXT) \
+	MSCFModel_KraussX.$(OBJEXT) MSCFModel_PWag2009.$(OBJEXT) \
+	MSCFModel_SmartSK.$(OBJEXT) MSCFModel_Wiedemann.$(OBJEXT) \
+	MSCFModel_Rail.$(OBJEXT)
 libmicrosimcfmodels_a_OBJECTS = $(am_libmicrosimcfmodels_a_OBJECTS)
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
@@ -352,6 +353,7 @@ MSCFModel_IDM.cpp MSCFModel_IDM.h \
 MSCFModel_Kerner.cpp MSCFModel_Kerner.h \
 MSCFModel_Krauss.cpp MSCFModel_Krauss.h \
 MSCFModel_sinzi.cpp MSCFModel_sinzi.h \
+MSCFModel_Simple.cpp MSCFModel_Simple.h \
 MSCFModel_KraussOrig1.cpp MSCFModel_KraussOrig1.h \
 MSCFModel_KraussPS.cpp MSCFModel_KraussPS.h \
 MSCFModel_KraussX.cpp MSCFModel_KraussX.h \
@@ -418,6 +420,7 @@ include ./$(DEPDIR)/MSCFModel_KraussPS.Po
 include ./$(DEPDIR)/MSCFModel_KraussX.Po
 include ./$(DEPDIR)/MSCFModel_PWag2009.Po
 include ./$(DEPDIR)/MSCFModel_Rail.Po
+include ./$(DEPDIR)/MSCFModel_Simple.Po
 include ./$(DEPDIR)/MSCFModel_SmartSK.Po
 include ./$(DEPDIR)/MSCFModel_Wiedemann.Po
 include ./$(DEPDIR)/MSCFModel_sinzi.Po
