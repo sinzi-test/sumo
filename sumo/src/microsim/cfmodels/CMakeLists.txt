@@ -9,6 +9,8 @@ set(microsim_cfmodels_STAT_SRCS
    MSCFModel_Kerner.h
    MSCFModel_Krauss.cpp
    MSCFModel_Krauss.h
+```MSCFModel_Simple.cpp
+   MSCFModel_Simple.h
    MSCFModel_KraussOrig1.cpp
    MSCFModel_KraussOrig1.h
    MSCFModel_KraussPS.cpp
