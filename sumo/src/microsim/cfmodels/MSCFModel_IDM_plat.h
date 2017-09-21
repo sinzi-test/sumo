@@ -62,14 +62,19 @@ public:
 	/**
 	The get leader of platoon function
 	*/
-	MSVehicle getPlatLeader(){
-		if (this.lead){
-			this.lead=this.lead.getPlatLeader();
+	double getPlatLeader()
+	{
+		if (this->lead){
+			this->Leader=this->lead.getPlatLeader();
 		}
 		else {
-			return this; 
+			return this->ID; 
 		}
-		return  null;
+	}
+
+	double getLeader()
+	{
+		
 	}
 	
 	
@@ -206,7 +211,7 @@ private:
 
 private:
     /// @brief Invalidated assignment operator
-    MSCFModel_IDM_plat& operator=(const MSCFModel_IDM& s);
+    MSCFModel_IDM_plat& operator=(const MSCFModel_IDM_plat& s);
 };
 
 #endif /* MSCFMODEL_IDM_PLAT_H */
