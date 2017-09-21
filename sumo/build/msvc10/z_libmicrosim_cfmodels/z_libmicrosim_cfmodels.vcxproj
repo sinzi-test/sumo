@@ -31,6 +31,7 @@
     <ClInclude Include="..\..\..\src\microsim\cfmodels\MSCFModel_Daniel1.h" />
     <ClInclude Include="..\..\..\src\microsim\cfmodels\MSCFModel_IDM.h" />
     <ClInclude Include="..\..\..\src\microsim\cfmodels\MSCFModel_IDM_CH.h" />
+    <ClInclude Include="..\..\..\src\microsim\cfmodels\MSCFModel_IDM_Plat.h" />
     <ClInclude Include="..\..\..\src\microsim\cfmodels\MSCFModel_Kerner.h" />
     <ClInclude Include="..\..\..\src\microsim\cfmodels\MSCFModel_Krauss.h" />
     <ClInclude Include="..\..\..\src\microsim\cfmodels\MSCFModel_sinzi.h" />
@@ -48,6 +49,7 @@
     <ClCompile Include="..\..\..\src\microsim\cfmodels\MSCFModel_Daniel1.cpp" />
     <ClCompile Include="..\..\..\src\microsim\cfmodels\MSCFModel_IDM.cpp" />
     <ClCompile Include="..\..\..\src\microsim\cfmodels\MSCFModel_IDM_CH.cpp" />
+    <ClCompile Include="..\..\..\src\microsim\cfmodels\MSCFModel_IDM_Plat.cpp" />
     <ClCompile Include="..\..\..\src\microsim\cfmodels\MSCFModel_Kerner.cpp" />
     <ClCompile Include="..\..\..\src\microsim\cfmodels\MSCFModel_Krauss.cpp" />
     <ClCompile Include="..\..\..\src\microsim\cfmodels\MSCFModel_sinzi.cpp" />

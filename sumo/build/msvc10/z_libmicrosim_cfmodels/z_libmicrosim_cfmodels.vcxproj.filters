@@ -23,6 +23,9 @@
     <ClInclude Include="..\..\..\src\microsim\cfmodels\MSCFModel_IDM.h">
       <Filter>Header-Dateien</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\src\microsim\cfmodels\MSCFModel_IDM_plat.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\src\microsim\cfmodels\MSCFModel_IDM_CH.h">
       <Filter>Header-Dateien</Filter>
     </ClInclude>
@@ -68,6 +71,9 @@
       <Filter>Quellcodedateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\src\microsim\cfmodels\MSCFModel_IDM.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\microsim\cfmodels\MSCFModel_IDM_plat.cpp">
       <Filter>Quellcodedateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\src\microsim\cfmodels\MSCFModel_IDM_CH.cpp">
