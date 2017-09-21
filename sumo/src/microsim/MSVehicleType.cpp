@@ -40,6 +40,7 @@
 #include <microsim/cfmodels/MSCFModel_Rail.h>
 #include "MSNet.h"
 #include "cfmodels/MSCFModel_IDM.h"
+#include "cfmodels/MSCFModel_IDM_CH.h"
 #include "cfmodels/MSCFModel_Kerner.h"
 #include "cfmodels/MSCFModel_Krauss.h"
 #include "cfmodels/MSCFModel_sinzi.h"
@@ -247,6 +248,11 @@ MSVehicleType::build(SUMOVTypeParameter& from) {
     switch (from.cfModel) {
         case SUMO_TAG_CF_IDM:
             vtype->myCarFollowModel = new MSCFModel_IDM(vtype, accel, decel, emergencyDecel, apparentDecel, tau,
+                    from.getCFParam(SUMO_ATTR_CF_IDM_DELTA, 4.),
+                    from.getCFParam(SUMO_ATTR_CF_IDM_STEPPING, .25));
+            break;
+        case SUMO_TAG_CF_IDM_CH:
+            vtype->myCarFollowModel = new MSCFModel_IDM_CH(vtype, accel, decel, emergencyDecel, apparentDecel, tau,
                     from.getCFParam(SUMO_ATTR_CF_IDM_DELTA, 4.),
                     from.getCFParam(SUMO_ATTR_CF_IDM_STEPPING, .25));
             break;

@@ -161,6 +161,7 @@ StringBijection<int>::Entry SUMOXMLDefinitions::tags[] = {
     { "device",                     SUMO_TAG_DEVICE },
     // Cars
     { "carFollowing-IDM",           SUMO_TAG_CF_IDM },
+    { "carFollowing-IDM_CH",        SUMO_TAG_CF_IDM_CH },
     { "carFollowing-IDMM",          SUMO_TAG_CF_IDMM },
     { "carFollowing-Krauss",        SUMO_TAG_CF_KRAUSS },
     { "carFollowing-sinzi",         SUMO_TAG_CF_SINZI },
@@ -667,6 +668,7 @@ StringBijection<LaneChangeModel>::Entry SUMOXMLDefinitions::laneChangeModelValue
 
 StringBijection<SumoXMLTag>::Entry SUMOXMLDefinitions::carFollowModelValues[] = {
     { "IDM",         SUMO_TAG_CF_IDM },
+    { "IDM_CH",      SUMO_TAG_CF_IDM_CH },
     { "IDMM",        SUMO_TAG_CF_IDMM },
     { "Krauss",      SUMO_TAG_CF_KRAUSS },
     { "sinzi",       SUMO_TAG_CF_SINZI },
