@@ -247,7 +247,7 @@ MSVehicleType::build(SUMOVTypeParameter& from) {
     const double sigma = from.getCFParam(SUMO_ATTR_SIGMA, SUMOVTypeParameter::getDefaultImperfection(from.vehicleClass));
     const double tau = from.getCFParam(SUMO_ATTR_TAU, 1.);
     switch (from.cfModel) {
-        case SUMO_TAG_CF_IDM:
+        case SUMO_TAG_CF_IDM_PLAT:
             vtype->myCarFollowModel = new MSCFModel_IDM(vtype, accel, decel, emergencyDecel, apparentDecel, tau,
                     from.getCFParam(SUMO_ATTR_CF_IDM_DELTA, 4.),
                     from.getCFParam(SUMO_ATTR_CF_IDM_STEPPING, .25));

@@ -48,36 +48,11 @@
 class MSCFModel_IDM_plat : public MSCFModel {
 public:
 
-
-	/**
-	 The leader of the platoon
-	*/
-	double Leader;
+	MSVehicle* Leader;
 	
-	/**
-	The vehicles leader
-	*/
-	double lead=getLeader();
+	MSVehicle* lead;
 	
-	/**
-	The get leader of platoon function
-	*/
-	double getPlatLeader()
-	{
-		if (this->lead){
-			this->Leader=this->lead.getPlatLeader();
-		}
-		else {
-			return this->ID; 
-		}
-	}
-
-	double getLeader()
-	{
-		
-	}
-	
-	
+	MSVehicle* ego;	
 	
 	
     /** @brief Constructor
