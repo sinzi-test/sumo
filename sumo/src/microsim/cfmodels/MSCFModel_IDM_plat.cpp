@@ -156,9 +156,11 @@ MSVehicle* MSCFModel_IDM_plat::getLeader()
 	return Leader;
 }
 
+void setego(const MSVehicle* const veh)
+{
+	ego*=veh;	
+}
 /*
-
-    void setego();
     void setlead();
     void setLeader(); */
 
