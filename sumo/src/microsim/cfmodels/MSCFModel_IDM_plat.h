@@ -48,10 +48,6 @@
 class MSCFModel_IDM_plat : public MSCFModel {
 public:
 
-<<<<<<< HEAD
-	MSVehicle* Leader;
-=======
-
 	/**
 	 The leader of the platoon
 	*/
@@ -65,11 +61,6 @@ public:
 
 	// The ego Vehicle
 	MSVehicle* ego;
->>>>>>> 8020873a9121c090df51a3ca1aac80f39a99ea39
-	
-	MSVehicle* lead;
-	
-	MSVehicle* ego;	
 	
 	
     /** @brief Constructor
@@ -154,9 +145,9 @@ public:
     }
     /// @}
 
-    MSVehicle getego();
-    MSVehicle getlead();
-    MSVehicle getLeader();
+    MSVehicle* getego();
+    MSVehicle* getlead();
+    MSVehicle* getLeader();
 
     void setego();
     void setlead();
