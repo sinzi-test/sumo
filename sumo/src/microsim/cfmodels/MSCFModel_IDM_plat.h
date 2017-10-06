@@ -137,6 +137,13 @@ public:
     }
     /// @}
 
+    MSVehicle getego();
+    MSVehicle getlead();
+    MSVehicle getLeader();
+
+    void setego();
+    void setlead();
+    void setLeader();
 
 
     /** @brief Duplicates the car-following model
