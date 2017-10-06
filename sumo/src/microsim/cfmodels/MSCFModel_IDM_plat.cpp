@@ -144,10 +144,19 @@ MSVehicle* MSCFModel_IDM_plat::getego()
 {
 	return ego;
 }
-    
 
-/*MSVehicle getlead();
-    MSVehicle getLeader();
+
+MSVehicle* MSCFModel_IDM_plat::getlead()
+{
+	return lead;
+}
+
+MSVehicle* MSCFModel_IDM_plat::getLeader()
+{
+	return Leader;
+}
+
+/*
 
     void setego();
     void setlead();
