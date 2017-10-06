@@ -69,6 +69,8 @@ MSCFModel_IDM_plat::~MSCFModel_IDM_plat() {}
 double
 MSCFModel_IDM_plat::moveHelper(MSVehicle* const veh, double vPos) const {
     const double vNext = MSCFModel::moveHelper(veh, vPos);
+    ego=veh;
+    get
     if (myAdaptationFactor != 1.) {
         VehicleVariables* vars = (VehicleVariables*)veh->getCarFollowVariables();
         vars->levelOfService += (vNext / veh->getLane()->getVehicleMaxSpeed(veh) - vars->levelOfService) / myAdaptationTime * TS;
@@ -76,6 +78,26 @@ MSCFModel_IDM_plat::moveHelper(MSVehicle* const veh, double vPos) const {
     return vNext;
 }
 
+
+void getPlatLeader(){
+	if (lead){
+		Leader=lead->setPlatLeader();
+	}
+	else {
+		Leader=ego; 
+	}
+}
+
+MSVehicle* setPlatLeader()
+{
+	return Leader;
+}
+
+void getLeader()
+{
+	std::pair<MSVehicle* meh, double> = ego::getLeader();
+	lead=meh;
+}
 
 double
 MSCFModel_IDM_plat::followSpeed(const MSVehicle* const veh, double speed, double gap2pred, double predSpeed, double /*predMaxDecel*/) const {
@@ -99,7 +121,8 @@ MSCFModel_IDM_plat::interactionGap(const MSVehicle* const veh, double vL) const 
     // speed != 0 and that vsafe will be the current speed plus acceleration,
     // i.e that with this gap there will be no interaction.
     const double acc = myAccel * (1. - pow(veh->getSpeed() / veh->getLane()->getVehicleMaxSpeed(veh), myDelta));
-    const double desacc = MAX2(this->lead.myAccel, acc);
+    const double leadacc= lead->getAcceleration();
+    const double desacc = MAX2(leadacc, acc);
     //acc = MAX2(this->lead.acc, acc);
     //acc=desacc;
     const double vNext = veh->getSpeed() + desacc;
@@ -137,6 +160,8 @@ MSCFModel_IDM_plat::_v(const MSVehicle* const veh, const double gap2pred, const 
 //    return MAX2(getSpeedAfterMaxDecel(egoSpeed), newSpeed);
     return MAX2(0., newSpeed);
 }
+
+
 
 
 MSCFModel*
