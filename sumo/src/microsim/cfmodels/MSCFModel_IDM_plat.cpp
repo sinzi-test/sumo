@@ -30,7 +30,7 @@
 #include <config.h>
 #endif
 
-#include "MSCFModel_IDM_plat.h"
+#include <microsim/cfmodels/MSCFModel_IDM_plat.h>
 #include <microsim/MSVehicle.h>
 #include <microsim/MSLane.h>
 #include <utils/common/RandHelper.h>
@@ -156,9 +156,9 @@ MSVehicle* MSCFModel_IDM_plat::getLeader()
 	return Leader;
 }
 
-void setego(const MSVehicle* const veh)
+void MSCFModel_IDM_plat::setego(MSVehicle* veh)
 {
-	ego*=veh;	
+	ego=veh;	
 }
 /*
     void setlead();

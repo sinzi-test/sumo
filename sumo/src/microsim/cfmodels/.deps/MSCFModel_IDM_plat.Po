@@ -1,6 +1,7 @@
 MSCFModel_IDM_plat.o: MSCFModel_IDM_plat.cpp /usr/include/stdc-predef.h \
- ../../../src/config.h MSCFModel_IDM_plat.h MSCFModel.h \
- /usr/include/c++/5/cmath \
+ ../../../src/config.h \
+ ../../../src/microsim/cfmodels/MSCFModel_IDM_plat.h \
+ ../../../src/microsim/cfmodels/MSCFModel.h /usr/include/c++/5/cmath \
  /usr/include/x86_64-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -359,9 +360,9 @@ MSCFModel_IDM_plat.o: MSCFModel_IDM_plat.cpp /usr/include/stdc-predef.h \
 
 ../../../src/config.h:
 
-MSCFModel_IDM_plat.h:
+../../../src/microsim/cfmodels/MSCFModel_IDM_plat.h:
 
-MSCFModel.h:
+../../../src/microsim/cfmodels/MSCFModel.h:
 
 /usr/include/c++/5/cmath:
 
