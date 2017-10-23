@@ -160,9 +160,17 @@ void MSCFModel_IDM_plat::setego(MSVehicle* veh)
 {
 	ego=veh;	
 }
-/*
-    void setlead();
-    void setLeader(); */
+
+void MSCFModel_IDM_plat::setlead(MSVehicle* veh)
+{
+	lead=veh;
+}
+
+    void MSCFModel_IDM_plat::setLeader(MSVehicle* veh)
+{
+	Leader=veh;
+}
+
 
 
 MSCFModel*

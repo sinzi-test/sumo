@@ -150,8 +150,8 @@ public:
     MSVehicle* getLeader();
 
     void setego(MSVehicle* veh);
-    //void setlead(veh);
-    //void setLeader(veh);
+    void setlead(MSVehicle* veh);
+    void setLeader(MSVehicle* veh);
 
 
     /** @brief Duplicates the car-following model
