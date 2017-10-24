@@ -159,10 +159,6 @@ MSVehicle* MSCFModel_IDM_plat::getLeader()
 	return Leader;
 }
 
-void MSCFModel_IDM_plat::setego(MSVehicle* veh)
-{
-	ego=veh;	
-}
 
 void MSCFModel_IDM_plat::setlead(MSVehicle* veh)
 {

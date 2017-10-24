@@ -149,7 +149,6 @@ public:
     MSVehicle* getlead();
     MSVehicle* getLeader();
 
-    void setego(MSVehicle* veh);
     void setlead(MSVehicle* veh);
     void setLeader(MSVehicle* veh);
 
