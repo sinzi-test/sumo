@@ -67,7 +67,10 @@ MSCFModel_IDM_plat::~MSCFModel_IDM_plat() {}
 
 
 double
-MSCFModel_IDM_plat::moveHelper(MSVehicle* const veh, double vPos) const {
+MSCFModel_IDM_plat::moveHelper(MSVehicle* const veh, double vPos) {
+	ego=veh;    
+
+	//setego(veh);
     const double vNext = MSCFModel::moveHelper(veh, vPos);
     if (myAdaptationFactor != 1.) {
         VehicleVariables* vars = (VehicleVariables*)veh->getCarFollowVariables();
@@ -166,7 +169,7 @@ void MSCFModel_IDM_plat::setlead(MSVehicle* veh)
 	lead=veh;
 }
 
-    void MSCFModel_IDM_plat::setLeader(MSVehicle* veh)
+void MSCFModel_IDM_plat::setLeader(MSVehicle* veh)
 {
 	Leader=veh;
 }

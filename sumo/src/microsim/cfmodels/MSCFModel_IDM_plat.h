@@ -100,7 +100,7 @@ public:
      * @param[in] vPos The possible velocity
      * @return The velocity after applying interactions with stops and lane change model influences
      */
-    double moveHelper(MSVehicle* const veh, double vPos) const;
+    double moveHelper(MSVehicle* const veh, double vPos);
 
 
     /** @brief Computes the vehicle's safe speed (no dawdling)
@@ -155,7 +155,7 @@ public:
 
 
     /** @brief Duplicates the car-following model
-     * @param[in] vtype The vehicle type this model belongs to (1:1)
+     * @param[in] vtype The vehicle type thins model belongs to (1:1)
      * @return A duplicate of this car-following model
      */
     MSCFModel* duplicate(const MSVehicleType* vtype) const;
