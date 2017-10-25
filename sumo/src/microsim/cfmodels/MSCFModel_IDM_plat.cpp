@@ -68,9 +68,9 @@ MSCFModel_IDM_plat::~MSCFModel_IDM_plat() {}
 
 double
 MSCFModel_IDM_plat::moveHelper(MSVehicle* const veh, double vPos) {
-	ego=veh;    
-
-	//setego(veh);
+    ego=veh;
+    setlead();
+    setLeader();	
     const double vNext = MSCFModel::moveHelper(veh, vPos);
     if (myAdaptationFactor != 1.) {
         VehicleVariables* vars = (VehicleVariables*)veh->getCarFollowVariables();
@@ -143,30 +143,40 @@ MSCFModel_IDM_plat::_v(const MSVehicle* const veh, const double gap2pred, const 
     return MAX2(0., newSpeed);
 }
 
-MSVehicle* MSCFModel_IDM_plat::getego()
+
+
+
+void MSCFModel_IDM_plat::setlead()
 {
-	return ego;
-}
+	std::pair<const MSVehicle*, double> veh_gap;
+	const MSVehicle* veh;
+	double gap;
+	veh_gap=ego->getLeader();	
+	std::tie(veh, gap)=veh_gap;
+	//const MSVehicle* replacement = veh;
 
-
-MSVehicle* MSCFModel_IDM_plat::getlead()
-{
-	return lead;
-}
-
-MSVehicle* MSCFModel_IDM_plat::getLeader()
-{
-	return Leader;
-}
-
-
-void MSCFModel_IDM_plat::setlead(MSVehicle* veh)
-{
 	lead=veh;
+	if (!lead){
+		lead=ego;
+		Leader=ego;
+		}
 }
 
-void MSCFModel_IDM_plat::setLeader(MSVehicle* veh)
+void MSCFModel_IDM_plat::setLeader()
 {
+	std::pair<const MSVehicle*, double> veh_gap;
+	const MSVehicle* veh;
+	double gap;
+	veh_gap=ego->getLeader();	
+	std::tie(veh, gap)=veh_gap;
+	//const MSVehicle* replacement = veh;
+	
+	veh_gap=ego->getLeader();
+	while(veh_gap!=NULL){	
+		std::tie(veh, gap)=veh_gap;
+		//replacement = veh;
+		veh_gap=ego->getLeader();	
+	}
 	Leader=veh;
 }
 
