@@ -51,7 +51,7 @@ public:
 	/**
 	 The leader of the platoon
 	*/
-	MSVehicle* Leader;
+	MSVehicle* leader;
 	
 	/**
 	The vehicles leader
@@ -146,7 +146,8 @@ public:
     /// @}
 
     void setlead();
-    void setLeader();
+
+    void setleader();
 
 
     /** @brief Duplicates the car-following model
