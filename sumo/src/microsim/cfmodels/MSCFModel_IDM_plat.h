@@ -51,12 +51,12 @@ public:
 	/**
 	 The leader of the platoon
 	*/
-	MSVehicle* leader;
+	const MSVehicle* leader;
 	
 	/**
 	The vehicles leader
 	*/
-	MSVehicle* lead;
+	const MSVehicle* lead;
 	
 
 	// The ego Vehicle

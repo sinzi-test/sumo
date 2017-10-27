@@ -163,16 +163,16 @@ void MSCFModel_IDM_plat::setlead()
 
 void MSCFModel_IDM_plat::setleader()
 {
+
 	std::pair<const MSVehicle*, double> veh_gap;
 	const MSVehicle* veh;
 	double gap;
 	veh_gap=ego->getLeader();	
 	std::tie(veh, gap)=veh_gap;
-	
-	veh_gap=ego->getLeader();
-	while(veh_gap!=NULL){	
+
+	while(gap!=NULL){
+		veh_gap=veh->getLeader();
 		std::tie(veh, gap)=veh_gap;
-		veh_gap=ego->getLeader();	
 	}
 	
 	leader=veh;
