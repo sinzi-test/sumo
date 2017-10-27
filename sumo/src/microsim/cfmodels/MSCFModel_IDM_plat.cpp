@@ -94,20 +94,11 @@ MSCFModel_IDM_plat::stopSpeed(const MSVehicle* const veh, const double speed, do
     return _v(veh, gap2pred, speed, 0, veh->getLane()->getVehicleMaxSpeed(veh), false);
 }
 
-
-/// @todo update interactionGap logic to IDM
 double
 MSCFModel_IDM_plat::interactionGap(const MSVehicle* const veh, double vL) const {
-    // Resolve the IDM equation to gap. Assume predecessor has
-    // speed != 0 and that vsafe will be the current speed plus acceleration,
-    // i.e that with this gap there will be no interaction.
     const double acc = myAccel * (1. - pow(veh->getSpeed() / veh->getLane()->getVehicleMaxSpeed(veh), myDelta));
-    //const double desacc = MAX2(this->lead.myAccel, acc);
-    //const double leadacc= lead->getAcceleration();
-    //const double desacc = MAX2(leadacc, acc);
-    //acc = MAX2(this->lead.acc, acc);
-    //acc=desacc;
-    const double vNext = veh->getSpeed(); //+ desacc;
+    const double desacc = MAX3(lead->myAcceleration, acc, leader->myAcceleration);
+    const double vNext = veh->getSpeed()+ desacc;
     const double gap = (vNext - vL) * (veh->getSpeed() + vL) / (2 * myDecel) + vL;
 
     // Don't allow timeHeadWay < deltaT situations.
