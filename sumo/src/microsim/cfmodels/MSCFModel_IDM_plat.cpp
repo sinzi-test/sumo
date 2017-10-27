@@ -97,7 +97,7 @@ MSCFModel_IDM_plat::stopSpeed(const MSVehicle* const veh, const double speed, do
 double
 MSCFModel_IDM_plat::interactionGap(const MSVehicle* const veh, double vL) const {
     const double acc = myAccel * (1. - pow(veh->getSpeed() / veh->getLane()->getVehicleMaxSpeed(veh), myDelta));
-    const double desacc = MAX3(lead->myAcceleration, acc, leader->myAcceleration);
+    const double desacc = MAX3(lead->getAcceleration(), acc, leader->getAcceleration());
     const double vNext = veh->getSpeed()+ desacc;
     const double gap = (vNext - vL) * (veh->getSpeed() + vL) / (2 * myDecel) + vL;
 
